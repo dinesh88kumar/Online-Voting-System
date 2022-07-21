@@ -21,16 +21,16 @@ function Result() {
             <div className="register-container" >
                 <div class="split left">
                     <div class="centered">
-                        <h1>Winner Candidate</h1>
+                        <h1>Leading Candidate</h1>
                         {arr.map((e) => {
                             const list = (
                                 <>
-                                    <ul>
-                                        <li>name: {e.name}</li>
-                                        <li>email: {e.email}</li>
-                                        <li>designation: {e.designation}</li>
+                                    <div className="card">
+                                        <p>name: {e.name}</p>
+                                        {/* <p>email: {e.email}</p> */}
+                                        <p>designation: {e.designation}</p>
                                         <h1>Counts: {e.counts}</h1>
-                                    </ul>
+                                    </div>
                                     <hr />
                                 </>
                             );
@@ -49,7 +49,7 @@ function Result() {
                             const list = (
                                 <>
                                     <ul>
-                                        <h2>name: {e.name}</h2>
+                                        <h2>{e.name}</h2>
 
                                         <h1>Counts: {e.counts}</h1>
                                     </ul>
