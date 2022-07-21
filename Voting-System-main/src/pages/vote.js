@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React from 'react';
 import { useState } from "react";
+import { useHistory } from 'react-router-dom';
+import "../components/registration.css";
 function Vote() {
+    let history = useHistory();
     const [clist, setclist] = useState([]);
 
     function getCandidates(a) {
@@ -20,7 +23,7 @@ function Vote() {
     function onVote(id, name, email, des, bio, eleid, c) {
 
 
-        console.log("called")
+        console.log("called" + c)
         // axios.get("http://localhost:8030/candidate/" + a
         // ).then((response) => ());
 
@@ -34,14 +37,22 @@ function Vote() {
             counts: c + 1,
 
         }
+
         )
 
-
+        axios.get("http://localhost:8004/getCandidates"
+        ).then((response) => (window.candidatelist = response.data)
+        );
+        console.log(window.candidatelist.counts + "llll")
+        alert("Voted Successfully");
+        history.push('/home')
 
 
     }
     return (
-        <div>
+        <div className='bb'>
+            <br></br>
+            <br></br>
             <div className="register-container" >
                 <div class="split left">
                     <div class="centered">
@@ -49,15 +60,15 @@ function Vote() {
                         {window.electionlist.map((voters) => {
                             const list = (
                                 <>
-                                    <ul>
-                                        <li>title: {voters.title}</li>
-                                        <li>category: {voters.category}</li>
-                                        <li>description: {voters.description}</li>
+                                    <div className='card'>
+                                        <p>{voters.title}</p>
+                                        <p>{voters.category}</p>
+                                        <p>{voters.description}</p>
 
                                         <br></br>
                                         <button onClick={() => getCandidates(voters.electionid)}>Select</button>
 
-                                    </ul>
+                                    </div>
                                     <hr />
                                 </>
                             );
@@ -75,14 +86,14 @@ function Vote() {
                         {clist.map((e) => {
                             const list = (
                                 <>
-                                    <ul>
-                                        <li>name: {e.name}</li>
-                                        <li>email: {e.email}</li>
-                                        <li>designation: {e.designation}</li>
+                                    <div className='card'>
+                                        <p>name: {e.name}</p>
+                                        <p>email: {e.email}</p>
+                                        <p>designation: {e.designation}</p>
 
                                         <br></br>
                                         <button onClick={() => onVote(e.id, e.name, e.email, e.designation, e.bio, e.electionid, e.counts)}>Vote</button>
-                                    </ul>
+                                    </div>
                                     <hr />
                                 </>
                             );
@@ -95,6 +106,8 @@ function Vote() {
                 </div>
 
             </div >
+            <br></br>
+            <br></br>
         </div>
     );
 };

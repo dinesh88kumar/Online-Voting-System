@@ -1,0 +1,76 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AdminApplication",
+            "request": "launch",
+            "mainClass": "com.example.admin.AdminApplication",
+            "projectName": "admin"
+        },
+        {
+            "type": "java",
+            "name": "Launch CandidatesApplication",
+            "request": "launch",
+            "mainClass": "com.example.candidates.CandidatesApplication",
+            "projectName": "candidates"
+        },
+        {
+            "type": "java",
+            "name": "Launch ElectionApplication",
+            "request": "launch",
+            "mainClass": "com.example.election.ElectionApplication",
+            "projectName": "election"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoginApplication",
+            "request": "launch",
+            "mainClass": "com.example.login.LoginApplication",
+            "projectName": "login"
+        },
+        {
+            "type": "java",
+            "name": "Launch RegisterApplication",
+            "request": "launch",
+            "mainClass": "com.example.register.RegisterApplication",
+            "projectName": "register"
+        }
+    ]
+}

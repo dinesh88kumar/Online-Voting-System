@@ -76,3 +76,24 @@ button {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
+.centerl {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 45px;
+
+}
+
+.bb {
+    background-color: azure;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    width: 250px;
+    background-color: #f1f1f1;
+}

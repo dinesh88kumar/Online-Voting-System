@@ -39,7 +39,9 @@ function Election() {
     }
 
     return (
-        <div>
+        <div className='bb'>
+            <br></br>
+            <br></br>
             <div className="register-container" >
                 <div class="split left">
                     <div class="centered">
@@ -47,12 +49,12 @@ function Election() {
                         {window.electionlist.map((voters) => {
                             const list = (
                                 <>
-                                    <ul>
-                                        <li>title: {voters.title}</li>
-                                        <li>category: {voters.category}</li>
-                                        <li>description: {voters.description}</li>
+                                    <div className='card'>
+                                        <p>title: {voters.title}</p>
+                                        <p>category: {voters.category}</p>
+                                        <p>description: {voters.description}</p>
 
-                                    </ul>
+                                    </div>
                                     <hr />
                                 </>
                             );
@@ -118,6 +120,7 @@ function Election() {
                 </div>
 
             </div >
+            <br></br> <br></br>
         </div>
 
     );

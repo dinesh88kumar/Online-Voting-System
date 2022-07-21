@@ -45,8 +45,10 @@ function Candidate() {
 
 
     return (
-        <div>
-            <div className="register-container" >
+        <div className='bb'>
+            <br></br>
+            <br></br>
+            {window.candidatelist != "" ? <div className="register-container" >
                 <div class="split left">
                     <div class="centered">
 
@@ -55,9 +57,13 @@ function Candidate() {
                             const list = (
                                 <>
                                     <ul>
-                                        <li>name: {e.name}</li>
-                                        <li>email: {e.email}</li>
-                                        <li>designation: {e.designation}</li>
+                                        <div className='card'>
+
+                                            <p>{e.name}</p>
+                                            {/* <p>{e.email}</p>
+                                            <p>{e.designation}</p> */}
+                                        </div>
+                                        <br></br>
 
                                     </ul>
                                     <hr />
@@ -134,6 +140,70 @@ function Candidate() {
                 </div>
 
             </div >
+                //second one
+                : <div class="centered">
+
+
+                    <form className="register-form" onSubmit={handleSubmit}>
+                        <br></br>
+                        <h1>Create Candidate</h1>
+                        <p>Fill in the Information Below</p>
+
+                        <input type="text"
+                            name="name"
+                            placeholder="name"
+                            size={60}
+                            onChange={(event) => {
+                                setname(event.target.value);
+                            }}
+                        />
+
+                        <input type="text"
+                            name="email"
+                            placeholder="email"
+                            onChange={(event) => {
+                                setemail(event.target.value);
+                            }}
+                        />
+
+                        <input type="text"
+                            name="designation"
+                            placeholder="designation"
+
+                            onChange={(event) => {
+                                setdesignation(event.target.value);
+                            }}
+                        />
+                        <input type="text"
+                            name="bio"
+                            placeholder="bio"
+
+                            onChange={(event) => {
+                                setbio(event.target.value);
+                            }}
+                        />
+                        <input type="text"
+                            name="electionid"
+                            placeholder="electionid"
+
+                            onChange={(event) => {
+                                setelectionid(event.target.value);
+                            }}
+                        />
+
+
+
+
+
+
+                        <button type="submit">Create</button>
+
+
+                    </form>
+
+
+                </div>}
+            <br></br> <br></br>
         </div>
     );
 };

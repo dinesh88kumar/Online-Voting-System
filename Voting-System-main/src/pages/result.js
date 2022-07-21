@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import "../components/registration.css";
 function Result() {
     var arr = [];
     var c = 0;
@@ -15,7 +15,9 @@ function Result() {
     });
     return (
 
-        <div>
+        <div className="bb">
+            <br></br>
+            <br></br>
             <div className="register-container" >
                 <div class="split left">
                     <div class="centered">
@@ -61,6 +63,8 @@ function Result() {
                 </div>
 
             </div >
+            <br></br>
+            <br></br>
         </div>
     );
 }
