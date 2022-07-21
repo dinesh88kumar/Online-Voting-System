@@ -1,0 +1,98 @@
+.content {
+    background-color: #FFF;
+    padding: 20px;
+  }
+  .content h2 {
+    padding-top: 5px;
+    margin-top: 5px;
+  }
+  
+  
+  h1, h2, p, ul, li {
+    font-family: sans-serif;
+  }
+  
+  div.header {
+    padding: 0px;
+  }
+  
+  ul.header li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+  }
+  ul.header {
+    background-color: #111;
+    padding: 10px;
+  }
+  ul.header li .button-4 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+  }
+  
+  
+  ul.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 8vh;
+  }
+  
+  ul.header1 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    float: right;
+  }
+  
+
+  li {
+    float: left;
+    
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li .button-4 {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 6px;
+    text-decoration: none;
+  }
+  
+  h2.header{
+    
+    padding: 5px;
+    padding-top: 12px;
+    float: left;
+    color: white;
+    border-right:1px solid #bbb;
+    padding-right: 10px;
+    
+  }
+  
+  li .button-4:hover:not(.active) {
+    background-color: rgb(254, 252, 252);
+    color: black
+  }
+  div.dashboard{
+    align-items: left;
+    text-align: left;
+    padding: 10px;
+  }

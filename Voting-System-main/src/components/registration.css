@@ -1,0 +1,78 @@
+.register-container {
+
+    display: flex;
+    height: 78vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 30vw;
+
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    margin: 0;
+}
+
+input {
+
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    padding-right: 0.9rem;
+    margin: 0.5rem;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    border: 1px solid white;
+
+}
+
+.bottom-link {
+    text-decoration: none;
+    color: black;
+}
+
+.split {
+    height: 80%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+
+
+
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+
+    background-color: rgb(237, 235, 235);
+}
+
+/* Control the right side */
+.right {
+    right: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

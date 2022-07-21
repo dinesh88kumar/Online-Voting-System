@@ -1,0 +1,25 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 25px;
+   
+}
+table{
+    align-items: center;
+    margin-left: 350px;
+    align-self: center;
+    
+}
+
+h2.table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+td, th{
+    width: 150px;
+}
+div {
+    
+    align-items: center;
+}
