@@ -5,7 +5,6 @@ This is a full-stack **Online Voting System** built using **React.js** for the f
 ## Features
 
 - User authentication and authorization (Admin & Voter roles)
-- Secure voting mechanism
 - Real-time vote count updates
 - Candidate registration and management (Admin)
 - Responsive user interface
